@@ -22,7 +22,7 @@ function CreateProductPage() {
 
   const onSubmit = async (data) => {
     data.productImage = imgUrl;
-    console.log(data);
+    // console.log(data);
     setLoading(true)
     try {
       const res = await axios.post(API + "/v1/create-product", data, {
@@ -42,9 +42,9 @@ function CreateProductPage() {
 
   const handelUpload = (file) => {
     if (
-      file.type == "image/jpeg" ||
-      file.type == "image/jpg" ||
-      file.type == "image/png"
+      file.type === "image/jpeg" ||
+      file.type === "image/jpg" ||
+      file.type === "image/png"
     ) {
       setSelectedImg(file);
       setImgErr(false);

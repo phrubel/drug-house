@@ -1,14 +1,15 @@
 import React from "react";
 import style from "../../styles/cart/single_cart.module.css";
 import img from "../../image/pump-oil.png";
-import { FaDollarSign, FaPlus, FaMinus } from "react-icons/fa";
+import {  FaPlus, FaMinus } from "react-icons/fa";
+import { HiOutlineCurrencyBangladeshi } from "react-icons/hi";
 import { CartProvider, useCart } from "react-use-cart";
 
 function SingleCart() {
   const { isEmpty, totalUniqueItems, items, updateItemQuantity, removeItem , cartTotal} =
     useCart();
 
-    console.log(cartTotal);
+    // console.log(cartTotal);
 
   if (isEmpty) return <p>Your cart is empty</p>;
   return (
@@ -25,7 +26,7 @@ function SingleCart() {
             <h5 className={style.title}>{data.title}</h5>
             <div className={style.m_r}>
               <p className={style.quate}>
-                {data.price * data.quantity} {data.price} * {data.quantity}
+              < HiOutlineCurrencyBangladeshi className={style.tk}/> {data.price * data.quantity} ({data.price} * {data.quantity})
               </p>
             </div>
           </div>

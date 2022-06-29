@@ -7,9 +7,9 @@ import  axios  from 'axios';
 import { API } from './../data/BackEndData';
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
+import Banner from "../../src/image/banner.jpeg"
 
-//xgmeeolb
-//dt15nm3dy
+
 
 function SignupPage() {
   const {
@@ -36,9 +36,9 @@ function SignupPage() {
 
   const handelUpload = (file) => {
     if (
-      file.type == "image/jpeg" ||
-      file.type == "image/jpg" ||
-      file.type == "image/png"
+      file.type === "image/jpeg" ||
+      file.type === "image/jpg" ||
+      file.type === "image/png"
     ) {
       setSelectedImg(file);
       setImgErr(false);
@@ -73,7 +73,7 @@ function SignupPage() {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+              src={Banner}
               className="img-fluid"
               alt="Sample "
             />

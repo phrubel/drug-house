@@ -3,8 +3,6 @@ import style from "../styles/users/user.module.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { API } from "./../data/BackEndData";
-import { AiFillDelete } from "react-icons/ai";
-import { FaEye } from "react-icons/fa";
 
 function AllUser() {
   const [userList, setUserList] = useState([]);
@@ -83,15 +81,8 @@ function AllUser() {
                         <tr key={index}>
                           <td className={style.my_row}>{data.pharmacyName}</td>
                           <td className={style.my_row}>{data.number}</td>
-                          {/* <td className={`d-flex gap-10 ${style.my_row}`}> */}
                           {
-                            /* <span className={style.icon}>
-                      <FaEye />
-                     </span>
-                     <span  className={style.icon}>
-                      <AiFillDelete />
-                     </span>
-                    </td> */
+                            
                             <td className={style.my_row}>
                               <button
                                 className="btn btn-sm btn-danger"

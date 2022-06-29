@@ -4,7 +4,7 @@ import axios from "axios";
 function SingleFileUpload({ file,setImgUrl }) {
     const [percentage, setPercentage] = useState(0);
 
-  console.log("percentage", percentage);
+  // console.log("percentage", percentage);
   useEffect(() => {
     const url = "https://api.cloudinary.com/v1_1/dyq4lwmgc/image/upload";
     // const url = "https://api.cloudinary.com/v1_1/dyq4lwmgc/image/upload";

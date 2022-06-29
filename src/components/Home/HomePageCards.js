@@ -3,8 +3,6 @@ import style from "../../styles/home/home_page_card.module.css";
 import ProductsCard from "./ProductsCard";
 
 
-import { productData } from "../../data/HomePageData";
-
 const HomePageCards = ({ products, loading }) => {
   const [cart, setCart] = useState([]);
 

@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import { API } from "./../data/BackEndData";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import checkToken from "../components/auth/UseAuth";
+// import checkToken from "../components/auth/UseAuth";
+import Banner from "../../src/image/banner.jpeg"
 
 export default function SignInPage() {
   const {
@@ -38,7 +39,7 @@ export default function SignInPage() {
     } catch (e) {
       setLoading(false);
       toast.error(e.response.data.error || "Something Wrong. Try Again!");
-      console.log(e.response.data.error);
+      // console.log(e.response.data.error);
     }
   };
 
@@ -48,7 +49,7 @@ export default function SignInPage() {
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-9 col-lg-6 col-xl-5">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+              src={Banner}
               className="img-fluid"
               alt="Sample "
             />

@@ -2,7 +2,7 @@ import React from "react";
 import style from "../../styles/home/home_page_card.module.css";
 import {  useCart } from "react-use-cart";
 import img from "../../image/pump-oil.png";
-import { FaDollarSign, FaPlus, FaMinus } from "react-icons/fa";
+import { HiOutlineCurrencyBangladeshi } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const ProductsCard = ({ product, handleClick }) => {
@@ -29,7 +29,7 @@ const ProductsCard = ({ product, handleClick }) => {
               <div className={style.f_left}>
                 <p className={style.discount_price}>
                   <span>
-                    <FaDollarSign />
+                  <HiOutlineCurrencyBangladeshi className={style.tk}/>
                   </span>
                   <span>
                     {Math.round(mainPrice - mainPrice * (discount / 100))}
@@ -37,26 +37,14 @@ const ProductsCard = ({ product, handleClick }) => {
                 </p>
                 <p className={style.main_price}>
                   <span>
-                    <FaDollarSign />
+                  <HiOutlineCurrencyBangladeshi className={style.tk}/>
                   </span>
                   <span>{mainPrice}</span>
                 </p>
               </div>
               <div>
                 {items.find((el) => el.id == _id) ? (
-                  // <div className={`${style.c_wrapper} d-flex`}>
-                  //   <span
-                  //     className={style.icon}
-                  //    onClick={() => updateItemQuantity(product.id, product.quantity + 1)}
-                  //   >
-                  //     <FaPlus />
-                  //   </span>
-
-                  //   <p className={style.input_box}>{ 1}</p>
-                  //   <span className={style.icon}>
-                  //     <FaMinus />
-                  //   </span>
-                  // </div>
+                 
                   <div className={style.e_w}>
                     <Link to="/cart">Go To Cart</Link>
                   </div>

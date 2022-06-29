@@ -1,6 +1,7 @@
 import style from "../../styles/common/footer.module.css";
 import { FaHome, FaCartArrowDown, FaFileAlt, FaBell } from "react-icons/fa";
-import { Routes, Route, Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 function FooterMenu() {
   return (
@@ -33,7 +34,7 @@ function FooterMenu() {
           </Link>
           <Link to="/profile" className={style.link}>
             <span>
-              <FaBell />
+              <CgProfile />
             </span>
             <span className={style.text}>Profile</span>
           </Link>

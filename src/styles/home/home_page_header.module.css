@@ -1,7 +1,5 @@
 
-.section{
 
-}
 
 .section_wrapper{
     display: flex;
@@ -12,4 +10,9 @@
 .right{
     display: flex;
     gap: 20px;
+}
+
+.logo{
+    height: 55px;
+    width: 85px;
 }

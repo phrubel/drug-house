@@ -1,7 +1,7 @@
 import style from "../../styles/notification/NotificationPopUp.module.css";
 
 function NotificatioPopUp({ show, handelClose,notification }) {
-    console.log(notification);
+    // console.log(notification);
   return (
     <div className={` ${show ? style.show : style.hide} ${style.section}`}>
       <div className="container">
